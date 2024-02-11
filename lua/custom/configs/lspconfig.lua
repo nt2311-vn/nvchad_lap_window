@@ -1,0 +1,109 @@
+local config = require "plugins.configs.lspconfig"
+local on_attach = config.on_attach
+local pid = vim.fn.getpid()
+
+local capabilities = config.capabilities
+
+local lspconfig = require "lspconfig"
+local util = require "lspconfig/util"
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    },
+  },
+}
+
+lspconfig.omnisharp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(pid) },
+  filetypes = { "cs", "vb" },
+  root_dir = util.root_pattern("*.sln", "*.csproj", "omnisharp.json", "function.json"),
+  enable_roslyn_analyzers = true,
+  organize_imports_on_format = true,
+  enable_import_completion = true,
+}
+
+lspconfig.angularls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {
+    "typescript",
+    "html",
+    "typescriptreact",
+  },
+}
+
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      },
+    },
+  },
+}
+
+lspconfig.jdtls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "jdtls" },
+  filetypes = { "java" },
+}
+
+lspconfig.zls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "zls" },
+  filetypes = { "zig", "zir" },
+  root_dir = util.root_pattern("zls.json", "build.zig", ".git"),
+}
+
+lspconfig.clangd.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "clangd" },
+  filetypes = { "c", "cpp" },
+  root_dir = util.root_pattern(
+    ".clangd",
+    ".clang-tidy",
+    ".clang-format",
+    "compile_commands.json",
+    "compile_flags.txt",
+    "configure.ac",
+    ".git"
+  ),
+}
+
+lspconfig.pylsp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "python" },
+  cmd = { "pylsp" },
+  root_dir = util.root_pattern("pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile"),
+}
+
+lspconfig.jsonls.setup {
+  cmd = { "vscode-json-language-server", "--stdio" },
+  filetypes = { "json", "jsonc" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+lspconfig.jqls.setup {
+  cmd = { "jq-lsp" },
+  filetypes = { "jq" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
