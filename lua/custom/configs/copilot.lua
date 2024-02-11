@@ -13,7 +13,7 @@ vim.g.copilot_filetypes = {
   "html",
   "css",
 }
-vim.keymap.set("i", "<tab>", 'copilot#Accept("<CR>")', {
+vim.keymap.set("i", "<C-as>", 'copilot#Accept("<CR>")', {
   noremap = true,
   silent = true,
   expr = true,
@@ -21,6 +21,13 @@ vim.keymap.set("i", "<tab>", 'copilot#Accept("<CR>")', {
 })
 
 vim.keymap.set("n", "<leader>cc", "copilot#Complete()", {
+  noremap = true,
+  silent = true,
+  expr = true,
+  replace_keycodes = false,
+})
+
+vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>", {
   noremap = true,
   silent = true,
   expr = true,
