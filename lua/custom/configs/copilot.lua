@@ -13,7 +13,7 @@ vim.g.copilot_filetypes = {
   "html",
   "css",
 }
-vim.keymap.set("i", "<C-as>", 'copilot#Accept("<CR>")', {
+vim.keymap.set("i", "<leader>as", 'copilot#Accept("<CR>")', {
   noremap = true,
   silent = true,
   expr = true,
