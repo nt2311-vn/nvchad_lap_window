@@ -12,6 +12,7 @@ vim.g.copilot_filetypes = {
   "java",
   "html",
   "css",
+  "markdown",
 }
 vim.keymap.set("i", "<leader>as", 'copilot#Accept("<CR>")', {
   noremap = true,
@@ -28,6 +29,13 @@ vim.keymap.set("n", "<leader>cc", "copilot#Complete()", {
 })
 
 vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>", {
+  noremap = true,
+  silent = true,
+  expr = true,
+  replace_keycodes = false,
+})
+
+vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>", {
   noremap = true,
   silent = true,
   expr = true,
