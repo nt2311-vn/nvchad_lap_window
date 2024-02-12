@@ -124,17 +124,6 @@ local plugins = {
     ft = { "go", "gomod" },
   },
   {
-    "gera2ld/ai.nvim",
-    dependencies = "nvim-lua/plenary.nvim",
-    opts = {
-      api_key = "AIzaSyDN0yz6BzI9wriG3QZWlxHsHPKMBskPvlo",
-      locale = "en",
-      alternate_locale = "zh",
-      prompts = {},
-    },
-    event = "VeryLazy",
-  },
-  {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     config = function()
