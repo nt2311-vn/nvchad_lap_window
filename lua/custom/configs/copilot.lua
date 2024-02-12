@@ -47,7 +47,6 @@ vim.keymap.set("i", "<leader>cp", "copilot#Previous()", {
   replace_keycodes = false,
 })
 
--- Write keymap for copilot panel
 vim.keymap.set("n", "<leader>pp", ":Copilot panel<CR>", {
   noremap = true,
   silent = true,
