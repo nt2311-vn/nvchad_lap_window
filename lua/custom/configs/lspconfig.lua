@@ -86,12 +86,12 @@ lspconfig.clangd.setup {
   ),
 }
 
-lspconfig.pylsp.setup {
+lspconfig.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  cmd = { "pyright-langserver", "--stdio" },
   filetypes = { "python" },
-  cmd = { "pylsp" },
-  root_dir = util.root_pattern("pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile"),
+  root_dir = util.root_pattern("pyproject.toml", "setup.py", "Pipfile", "requirements.txt", ".git"),
 }
 
 lspconfig.jsonls.setup {

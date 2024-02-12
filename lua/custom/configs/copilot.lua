@@ -13,6 +13,7 @@ vim.g.copilot_filetypes = {
   "html",
   "css",
   "markdown",
+  "plaintext",
 }
 vim.keymap.set("i", "<C>as", 'copilot#Accept("<CR>")', {
   noremap = true,
