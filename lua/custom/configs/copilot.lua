@@ -14,7 +14,7 @@ vim.g.copilot_filetypes = {
   "css",
   "markdown",
 }
-vim.keymap.set("i", "<leader>as", 'copilot#Accept("<CR>")', {
+vim.keymap.set("i", "<C>as", 'copilot#Accept("<CR>")', {
   noremap = true,
   silent = true,
   expr = true,
@@ -42,13 +42,13 @@ vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>", {
   replace_keycodes = false,
 })
 
-vim.keymap.set("i", "<leader>cn", "copilot#Next()", {
+vim.keymap.set("i", "<C>an", "copilot#Next()", {
   noremap = true,
   silent = true,
   expr = true,
   replace_keycodes = false,
 })
-vim.keymap.set("i", "<leader>cp", "copilot#Previous()", {
+vim.keymap.set("i", "<C>ap", "copilot#Previous()", {
   noremap = true,
   silent = true,
   expr = true,
