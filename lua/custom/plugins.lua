@@ -141,8 +141,9 @@ local plugins = {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
+      local custom_molokai = require "lualine.themes.molokai"
       require("lualine").setup {
-        options = { theme = "molokai" },
+        options = { theme = custom_molokai },
       }
     end,
   },
