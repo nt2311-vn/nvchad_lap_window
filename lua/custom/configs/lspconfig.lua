@@ -107,3 +107,10 @@ lspconfig.jqls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
+
+lspconfig.metals.setup {
+  cmd = { "metals" },
+  filetypes = { "scala" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
