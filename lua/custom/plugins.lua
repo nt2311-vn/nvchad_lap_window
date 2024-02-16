@@ -130,13 +130,13 @@ local plugins = {
       return require "custom.configs.none-ls"
     end,
   },
-  {
-    "github/copilot.vim",
-    lazy = false,
-    config = function()
-      return require "custom.configs.copilot"
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  --   config = function()
+  --     return require "custom.configs.copilot"
+  --   end,
+  -- },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
