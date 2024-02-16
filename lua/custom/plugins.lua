@@ -137,5 +137,9 @@ local plugins = {
       return require "custom.configs.copilot"
     end,
   },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 }
 return plugins
