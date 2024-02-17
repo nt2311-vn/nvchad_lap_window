@@ -5,9 +5,11 @@ tokyonight.setup {
   transparent = true,
 
   -- style
-  comments = { italic = false },
-  keywords = { italic = false, bold = true },
-  functions = { italic = false, bold = true },
+  styles = {
+    comments = { italic = false },
+    keywords = { italic = false, bold = true },
+    functions = { italic = false, bold = true },
+  },
 }
 
 vim.cmd [[colorscheme tokyonight-night]]
