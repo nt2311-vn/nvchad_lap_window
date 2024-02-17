@@ -138,14 +138,10 @@ local plugins = {
   --   end,
   -- },
   {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      local custom_molokai = require "lualine.themes.molokai"
-      require("lualine").setup {
-        options = { theme = custom_molokai },
-      }
-    end,
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   },
 }
 return plugins
