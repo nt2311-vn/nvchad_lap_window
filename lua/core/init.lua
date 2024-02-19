@@ -113,3 +113,20 @@ local new_cmd = vim.api.nvim_create_user_command
 new_cmd("NvChadUpdate", function()
   require "nvchad.updater"()
 end, {})
+
+vim.wo.relativenumber = true
+
+-- Custom highlight for go string directive
+vim.cmd [[
+highlight GoStringDirective guifg=#ff0000
+]]
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.cmd [[
+    syntax match GoStringDirective /%\([-+# 0]*\(\d+\|\*\|\.\d+\|\.\*\|\)\)*[vTtbcdoqxXUeEfFgGsp]/ containedin=goString
+    highlight link GoStringDirective Special
+    ]]
+  end,
+})
