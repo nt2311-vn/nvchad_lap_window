@@ -275,3 +275,18 @@ end
 require("lazy").setup(default_plugins, config.lazy_nvim)
 
 vim.wo.relativenumber = true
+
+-- Custom higlight for go string directive
+vim.cmd [[
+higlight GoStringDirective guifg=#ff0000
+]]
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.cmd [[
+    syntax match GoStringDirective /%\([-+# 0]*\(\d+\|\*\|\.\d+\|\.\*\|\)\)*[vTtbcdoqxXUeEfFgGsp]/ containedin=goString
+    highlight link GoStringDirective Special
+    ]]
+  end,
+})
