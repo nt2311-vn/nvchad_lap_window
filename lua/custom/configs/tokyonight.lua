@@ -1,7 +1,7 @@
 local tokyonight = require "tokyonight"
 
 tokyonight.setup {
-  style = "night",
+  style = "moon",
   transparent = true,
 
   -- style
@@ -12,4 +12,4 @@ tokyonight.setup {
   },
 }
 
-vim.cmd [[colorscheme tokyonight-night]]
+vim.cmd [[colorscheme tokyonight-moon]]
