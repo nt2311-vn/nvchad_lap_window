@@ -137,14 +137,14 @@ local plugins = {
   --     return require "custom.configs.copilot"
   --   end,
   -- },
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      return require "custom.configs.tokyonight"
-    end,
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     return require "custom.configs.tokyonight"
+  --   end,
+  -- },
 }
 return plugins
