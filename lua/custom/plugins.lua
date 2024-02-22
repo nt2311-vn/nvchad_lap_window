@@ -146,5 +146,8 @@ local plugins = {
   --     return require "custom.configs.tokyonight"
   --   end,
   -- },
+  {
+    "davidgranstrom/nvim-markdown-preview",
+  },
 }
 return plugins
