@@ -246,7 +246,11 @@ local default_plugins = {
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "telescope")
       local telescope = require "telescope"
-      telescope.setup(opts)
+      telescope.setup {
+        defaults = {
+          file_ignore_patterns = { "nodes_modules" },
+        },
+      }
 
       -- load extensions
       for _, ext in ipairs(opts.extensions_list) do
