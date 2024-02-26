@@ -250,6 +250,13 @@ local default_plugins = {
         pickers = {
           find_files = {
             hidden = true,
+            find_command = {
+              "rg",
+              "--files",
+              "--hidden",
+              "--glob=!**/.git/*",
+              "--glob=!**/package-lock.json",
+            },
           },
         },
       }
