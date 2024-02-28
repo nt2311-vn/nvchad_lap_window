@@ -27,7 +27,7 @@ local default_plugins = {
       require "base46.term"
       require("nvterm").setup {
         terminals = {
-          shell = "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+          shell = "pwsh",
         },
       }
     end,
