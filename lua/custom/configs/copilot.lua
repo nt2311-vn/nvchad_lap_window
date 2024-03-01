@@ -15,6 +15,7 @@ vim.g.copilot_filetypes = {
   "markdown",
   "plaintext",
 }
+
 vim.keymap.set("i", "<C-;>", 'copilot#Accept("<CR>")', {
   noremap = true,
   silent = true,
