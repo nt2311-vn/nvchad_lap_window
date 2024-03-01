@@ -15,41 +15,7 @@ vim.g.copilot_filetypes = {
   "markdown",
   "plaintext",
 }
-vim.keymap.set("i", "<C>as", 'copilot#Accept("<CR>")', {
-  noremap = true,
-  silent = true,
-  expr = true,
-  replace_keycodes = false,
-})
-
-vim.keymap.set("n", "<leader>cc", "copilot#Complete()", {
-  noremap = true,
-  silent = true,
-  expr = true,
-  replace_keycodes = false,
-})
-
-vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>", {
-  noremap = true,
-  silent = true,
-  expr = true,
-  replace_keycodes = false,
-})
-
-vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>", {
-  noremap = true,
-  silent = true,
-  expr = true,
-  replace_keycodes = false,
-})
-
-vim.keymap.set("i", "<C>an", "copilot#Next()", {
-  noremap = true,
-  silent = true,
-  expr = true,
-  replace_keycodes = false,
-})
-vim.keymap.set("i", "<C>ap", "copilot#Previous()", {
+vim.keymap.set("i", "<C-;>", 'copilot#Accept("<CR>")', {
   noremap = true,
   silent = true,
   expr = true,
