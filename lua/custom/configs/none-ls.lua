@@ -5,12 +5,12 @@ null_ls.setup {
 
     -- formatting
     null_ls.builtins.formatting.stylua,
-    null_ls.builtins.formatting.ruff_format,
     null_ls.builtins.formatting.biome,
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.goimports,
     null_ls.builtins.formatting.golines,
     null_ls.builtins.formatting.scalafmt,
+    null_ls.builtins.formatting.black,
 
     -- diagnostics
     null_ls.builtins.diagnostics.yamllint,
