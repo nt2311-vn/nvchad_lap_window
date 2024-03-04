@@ -160,11 +160,22 @@ local plugins = {
           theme_conf = { border = true },
           previewer = false,
         },
-        vim.keymap.set("n", "<leader>ls", require("auto-session.session-lens").search_session, {
-          noremap = true,
-        }),
       }
     end,
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
   },
 }
 return plugins
