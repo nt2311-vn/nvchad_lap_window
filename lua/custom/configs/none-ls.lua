@@ -13,9 +13,7 @@ null_ls.setup {
     null_ls.builtins.formatting.scalafmt,
 
     -- diagnostics
-    null_ls.builtins.diagnostics.ruff,
     null_ls.builtins.diagnostics.yamllint,
-    null_ls.builtins.diagnostics.eslint_d,
   },
   on_attach = function(client, bufnr)
     if client.supports_method "textDocument/formatting" then
