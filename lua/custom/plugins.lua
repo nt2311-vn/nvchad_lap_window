@@ -180,5 +180,12 @@ local plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function()
+      return require "custom.configs.lint"
+    end,
+  },
 }
 return plugins
