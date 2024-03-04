@@ -92,8 +92,7 @@ autocmd("BufWritePost", {
     vim.g.nvchad_theme = config.ui.theme
     vim.g.transparency = config.ui.transparency
 
-    -- statusline
-    require("plenary.reload").reload_module("nvchad.statusline." .. config.ui.statusline.theme)
+    -- statusline require("plenary.reload").reload_module("nvchad.statusline." .. config.ui.statusline.theme)
     vim.opt.statusline = "%!v:lua.require('nvchad.statusline." .. config.ui.statusline.theme .. "').run()"
 
     -- tabufline
@@ -134,3 +133,4 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_set_keymap("n", "<leader>cd", ":Copilot disable<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>ce", ":Copilot enable<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>LazyGit<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>gc", "<cmd>LazyGitCurrentFile<CR>", { noremap = true, silent = true })
