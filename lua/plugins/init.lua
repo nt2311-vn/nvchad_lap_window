@@ -231,8 +231,11 @@ local default_plugins = {
       dofile(vim.g.base46_cache .. "nvimtree")
       require("nvim-tree").setup {
         view = {
-          width = 1080,
+          width = 2040,
           side = "left",
+        },
+        filters = {
+          dotfiles = false,
         },
       }
     end,
