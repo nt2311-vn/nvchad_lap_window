@@ -188,5 +188,12 @@ local plugins = {
       return require "custom.configs.lint"
     end,
   },
+  {
+    "windwp/nvim-ts-autotag",
+    event = "BufRead",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
 }
 return plugins
