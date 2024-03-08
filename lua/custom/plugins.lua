@@ -12,6 +12,7 @@ local plugins = {
         "css",
         "javascript",
         "typescript",
+        "tsx",
         "jsdoc",
         "json",
         "vue",
