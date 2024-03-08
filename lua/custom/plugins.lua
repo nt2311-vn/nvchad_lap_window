@@ -19,6 +19,9 @@ local plugins = {
         "svelte",
         "http",
 
+        --fullstack
+        "dart",
+
         -- Python
         "python",
 
@@ -193,6 +196,13 @@ local plugins = {
     event = "BufRead",
     config = function()
       require("nvim-ts-autotag").setup()
+    end,
+  },
+  {
+    "dart-lang/dart-vim-plugin",
+    ft = { "dart" },
+    config = function()
+      require("dart-vim-plugin").setup()
     end,
   },
 }
