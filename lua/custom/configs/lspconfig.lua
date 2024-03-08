@@ -7,6 +7,27 @@ local capabilities = config.capabilities
 local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
+lspconfig.emmet_ls.setup {
+  filetypes = { "html", "css", "javascriptreact", "typescriptreact" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "emmet-ls", "--stdio" },
+}
+
+lspconfig.cssls.setup {
+  filetypes = { "css", "scss", "less", "sass" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "css-languageserver", "--stdio" },
+}
+
+lspconfig.tailwindcss.setup {
+  filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact", "svelte", "vue" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "tailwindcss-language-server", "--stdio" },
+}
+
 lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
