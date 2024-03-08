@@ -18,7 +18,7 @@ lspconfig.cssls.setup {
   filetypes = { "css", "scss", "less", "sass" },
   on_attach = on_attach,
   capabilities = capabilities,
-  cmd = { "css-languageserver", "--stdio" },
+  cmd = { "vscode-css-language-server", "--stdio" },
 }
 
 lspconfig.tailwindcss.setup {
