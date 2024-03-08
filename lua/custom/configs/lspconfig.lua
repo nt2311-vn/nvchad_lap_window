@@ -135,3 +135,10 @@ lspconfig.metals.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
+
+lspconfig.dartls.setup {
+  cmd = { "dart", "language-server", "--protocol=lsp" },
+  filetypes = { "dart" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
