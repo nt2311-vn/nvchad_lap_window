@@ -141,4 +141,15 @@ lspconfig.dartls.setup {
   filetypes = { "dart" },
   on_attach = on_attach,
   capabilities = capabilities,
+  init_options = {
+    onlyAnalyzeProjectsWithOpenFiles = false,
+  },
+  settings = {
+    dart = {
+      completeFunctionCalls = true,
+      showTodos = true,
+      enableSnippets = true,
+      updateImportsOnRename = true,
+    },
+  },
 }
