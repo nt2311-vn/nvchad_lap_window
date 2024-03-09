@@ -10,6 +10,7 @@ vim.g.copilot_filetypes = {
   "cpp",
   "csharp",
   "java",
+  "dart",
   "html",
   "css",
   "markdown",
