@@ -198,12 +198,5 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
-  {
-    "dart-lang/dart-vim-plugin",
-    ft = { "dart" },
-    config = function()
-      require("dart-vim-plugin").setup()
-    end,
-  },
 }
 return plugins
