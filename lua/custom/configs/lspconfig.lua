@@ -8,7 +8,7 @@ local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
 lspconfig.emmet_ls.setup {
-  filetypes = { "html", "css", "javascriptreact", "typescriptreact" },
+  filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "svelte" },
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = { "emmet-ls", "--stdio" },
