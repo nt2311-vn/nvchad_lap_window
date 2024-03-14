@@ -198,11 +198,5 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
-  {
-    "mhartington/formatter.nvim",
-    config = function()
-      return require "custom.configs.formatter"
-    end,
-  },
 }
 return plugins
