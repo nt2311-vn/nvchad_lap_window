@@ -15,6 +15,8 @@ vim.g.copilot_filetypes = {
   "css",
   "markdown",
   "plaintext",
+  "svelte",
+  "vue",
 }
 
 vim.keymap.set("i", "<C-;>", 'copilot#Accept("<CR>")', {
