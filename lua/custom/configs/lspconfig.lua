@@ -157,7 +157,7 @@ lspconfig.dartls.setup {
 lspconfig.volar.setup {
   cmd = { "vue-language-server", "--stdio" },
   filetypes = { "vue" },
-  root_dir = util.root_pattern("package.json", "vue.config.js", "vite.config.js", "nuxt.config.js", ".git"),
+  root_dir = util.root_pattern "package.json",
   on_attach = on_attach,
   capabilities = capabilities,
 }
