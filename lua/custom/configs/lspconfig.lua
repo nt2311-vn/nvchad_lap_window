@@ -153,3 +153,15 @@ lspconfig.dartls.setup {
     },
   },
 }
+
+lspconfig.volar.setup {
+  cmd = { "vue-language-server", "--stdio" },
+  filetypes = { "vue" },
+  init_options = {
+    typescript = {
+      tsdk = "~/node_modules/typescript/lib/",
+    },
+  },
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
