@@ -18,6 +18,9 @@ null_ls.setup {
 
     -- diagnostics
     null_ls.builtins.diagnostics.yamllint,
+    null_ls.builtins.diagnostics.eslint_d.with {
+      filetypes = { "javascriptreact", "typescriptreact", "vue", "svelte" },
+    },
   },
   on_attach = function(client, bufnr)
     if client.supports_method "textDocument/formatting" then
