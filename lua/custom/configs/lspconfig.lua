@@ -154,12 +154,12 @@ lspconfig.dartls.setup {
   },
 }
 
-lspconfig.vuels.setup {
-  cmd = { "vls" },
-  filetypes = { "vue" },
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+-- lspconfig.vuels.setup {
+--   cmd = { "vls" },
+--   filetypes = { "vue" },
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
 
 local function get_typescript_server_path(root_dir)
   local global_ts = "C:/Users/NguyenToan/node_modules/typescript/lib"
